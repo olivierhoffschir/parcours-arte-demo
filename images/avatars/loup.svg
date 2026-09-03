@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="50" fill="#0f0a1a"/>
+  <!-- Body -->
+  <ellipse cx="50" cy="65" rx="16" ry="20" fill="#546E7A"/>
+  <!-- Chest fur -->
+  <ellipse cx="50" cy="72" rx="10" ry="13" fill="#78909C"/>
+  <!-- Tail -->
+  <path d="M65 68 C75 62, 80 68, 75 75 C72 73, 68 72, 65 68Z" fill="#455A64"/>
+  <!-- Head -->
+  <circle cx="50" cy="38" r="14" fill="#607D8B"/>
+  <!-- Ears -->
+  <path d="M38 28 L35 18 L44 26Z" fill="#607D8B"/>
+  <path d="M62 28 L65 18 L56 26Z" fill="#607D8B"/>
+  <path d="M38 27 L36 20 L43 26Z" fill="#37474F"/>
+  <path d="M62 27 L64 20 L57 26Z" fill="#37474F"/>
+  <!-- Face markings -->
+  <path d="M40 35 C40 30, 50 28, 50 35" fill="#B0BEC5"/>
+  <path d="M60 35 C60 30, 50 28, 50 35" fill="#B0BEC5"/>
+  <!-- Eyes (yellow wolf eyes) -->
+  <ellipse cx="43" cy="37" rx="4" ry="3.5" fill="#FDD835"/>
+  <ellipse cx="57" cy="37" rx="4" ry="3.5" fill="#FDD835"/>
+  <ellipse cx="43" cy="37" rx="2" ry="3" fill="#1a0a00"/>
+  <ellipse cx="57" cy="37" rx="2" ry="3" fill="#1a0a00"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="44" rx="3.5" ry="2.5" fill="#263238"/>
+  <!-- Mouth -->
+  <path d="M47 47 L50 49 L53 47" stroke="#263238" stroke-width="1" fill="none"/>
+  <!-- Fur details -->
+  <path d="M36 42 C34 44, 35 48, 38 46" fill="#78909C"/>
+  <path d="M64 42 C66 44, 65 48, 62 46" fill="#78909C"/>
+</svg>

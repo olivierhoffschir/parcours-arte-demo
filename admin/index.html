@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parcours ARTE — back-office éditorial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bo-entete">
+    <div class="bo-entete-corps">
+      <p class="bo-marque">Parcours ARTE <span>back-office éditorial</span></p>
+      <nav class="bo-nav">
+        <a href="#parcours">Parcours</a>
+        <a href="#chapitres">Chapitres</a>
+        <!-- Traductions n'est plus dans la navigation : les deux onglets de chaque
+             fiche disent maintenant ce qui leur manque, là où on écrit. L'écran de
+             suivi reste atteignable par #traductions, pour un état des lieux
+             d'ensemble avant une campagne de traduction. -->
+      </nav>
+      <div id="bo-etat" class="bo-etat"></div>
+    </div>
+  </header>
+
+  <main id="bo-vue" class="bo-vue"></main>
+
+  <footer class="bo-pied">
+    Outil temporaire, le temps de la bêta. Le contenu écrit ici alimente le prototype
+    après synchronisation.
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

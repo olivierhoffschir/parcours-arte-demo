@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="50" fill="#1a0f0a"/>
+  <!-- Body -->
+  <ellipse cx="50" cy="62" rx="18" ry="22" fill="#E65100"/>
+  <!-- Wings -->
+  <path d="M32 55 C20 40, 25 25, 40 35 L42 50Z" fill="#FF6D00"/>
+  <path d="M68 55 C80 40, 75 25, 60 35 L58 50Z" fill="#FF6D00"/>
+  <!-- Wing flames -->
+  <path d="M25 35 C22 28, 30 20, 35 30" fill="#FFD600" opacity="0.8"/>
+  <path d="M75 35 C78 28, 70 20, 65 30" fill="#FFD600" opacity="0.8"/>
+  <!-- Head -->
+  <circle cx="50" cy="38" r="12" fill="#FF8F00"/>
+  <!-- Crown feathers -->
+  <path d="M44 28 L42 18 L46 24Z" fill="#FFD600"/>
+  <path d="M50 26 L50 14 L53 22Z" fill="#FF6D00"/>
+  <path d="M56 28 L58 18 L54 24Z" fill="#FFD600"/>
+  <!-- Eyes -->
+  <circle cx="45" cy="37" r="3" fill="#fff"/>
+  <circle cx="55" cy="37" r="3" fill="#fff"/>
+  <circle cx="46" cy="37" r="1.5" fill="#1a0a00"/>
+  <circle cx="56" cy="37" r="1.5" fill="#1a0a00"/>
+  <!-- Beak -->
+  <path d="M48 42 L50 47 L52 42Z" fill="#FFD600"/>
+  <!-- Tail flames -->
+  <path d="M42 80 C38 90, 45 95, 50 85" fill="#FF6D00" opacity="0.7"/>
+  <path d="M50 82 C50 92, 55 95, 58 85" fill="#FFD600" opacity="0.6"/>
+</svg>

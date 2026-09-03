@@ -1,0 +1,1123 @@
+/* ==========================================================================
+   Back-office éditorial — style.
+   Outil interne et temporaire : lisibilité et densité d'information avant tout,
+   pas de travail de design dédié (la spec l'écarte explicitement). On reprend
+   simplement les couleurs ARTE pour ne pas dépayser.
+   ========================================================================== */
+
+:root {
+  --bo-fond: #f6f6f7;
+  --bo-carte: #ffffff;
+  --bo-encre: #1a1a1a;
+  --bo-encre-2: #5c5c5c;
+  --bo-trait: #dcdcde;
+  --bo-orange: #fa481c;
+  --bo-orange-sombre: #c9350f;   /* contraste suffisant pour du texte */
+  --bo-vert: #1f7a3d;
+  --bo-rouge: #b3261e;
+  --bo-r: 6px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bo-fond);
+  color: var(--bo-encre);
+  font: 15px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ───────────────────────── En-tête ───────────────────────── */
+
+.bo-entete {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bo-encre);
+  color: #fff;
+}
+
+.bo-entete-corps {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 24px;
+}
+
+.bo-marque { margin: 0; font-weight: 700; }
+.bo-marque span {
+  margin-left: 8px;
+  color: #b9b9b9;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.bo-nav { display: flex; gap: 16px; }
+.bo-nav a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+.bo-nav a:hover { border-color: var(--bo-orange); }
+
+.bo-etat {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-left: auto;
+  font-size: 13px;
+  text-align: right;
+}
+.bo-etat-calme { color: #9a9a9a; }
+.bo-etat-actif { color: #ffb59c; font-weight: 600; }
+.bo-etat-note { color: #9a9a9a; }
+
+/* ───────────────────────── Écran ───────────────────────── */
+
+.bo-vue { max-width: 1100px; margin: 0 auto; padding: 24px; }
+
+.bo-ecran { display: flex; flex-direction: column; gap: 20px; }
+
+.bo-ecran-tete {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Le lien vers le rendu et la bascule de statut, groupés à droite du titre. */
+.bo-ecran-tete-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.bo-lien-prototype {
+  color: var(--bo-encre-2);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.bo-lien-prototype:hover { color: var(--bo-orange-sombre); text-decoration: underline; }
+
+.bo-titre { margin: 4px 0 0; font-size: 26px; line-height: 1.2; }
+.bo-sous-titre { margin: 4px 0 0; color: var(--bo-encre-2); font-size: 14px; }
+
+/* ───────────────────────── Listes ───────────────────────── */
+
+.bo-liste-rangees {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bo-rangee {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--bo-trait);
+  border-radius: var(--bo-r);
+  background: var(--bo-carte);
+}
+
+.bo-rangee-corps { flex: 1 1 auto; min-width: 0; }
+.bo-rangee-titre { margin: 0; font-weight: 600; }
+.bo-rangee-meta { margin: 2px 0 0; color: var(--bo-encre-2); font-size: 13px; }
+.bo-rangee-actions { display: flex; gap: 8px; flex: 0 0 auto; }
+
+.bo-rattache { color: var(--bo-vert); }
+/* Un parcours publié rend son chapitre intouchable : la mention doit se voir. */
+.bo-rattache--publie { font-weight: 600; }
+.bo-orphelin { color: var(--bo-encre-2); font-style: italic; }
+
+/* ───────────────────────── Blocs de formulaire ───────────────────────── */
+
+.bo-bloc {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+  border: 1px solid var(--bo-trait);
+  border-radius: var(--bo-r);
+  background: var(--bo-carte);
+}
+
+.bo-bloc-titre {
+  margin: 0;
+  font-size: 17px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--bo-trait);
+}
+
+.bo-bloc-aide { margin: -6px 0 0; color: var(--bo-encre-2); font-size: 13px; }
+
+.bo-champ { display: flex; flex-direction: column; gap: 5px; }
+
+.bo-label {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--bo-encre-2);
+}
+
+.bo-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--bo-trait);
+  border-radius: 4px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+  resize: vertical;
+}
+.bo-input:focus { outline: 2px solid var(--bo-orange); outline-offset: -1px; }
+
+.bo-input--id { max-width: 200px; font-family: ui-monospace, monospace; }
+.bo-input--temps { max-width: 90px; font-family: ui-monospace, monospace; }
+.bo-input--nombre { max-width: 110px; }
+
+.bo-aide { color: var(--bo-encre-2); font-size: 12px; }
+
+.bo-grille-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.bo-couleur-ligne { display: flex; gap: 8px; align-items: center; }
+.bo-couleur { width: 44px; height: 36px; padding: 2px; border: 1px solid var(--bo-trait); }
+
+.bo-bascule { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+
+/* Repère « texte provisoire » : discret, mais repérable d'un coup d'œil. */
+.bo-provisoire {
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: #fff1e8;
+  color: var(--bo-orange-sombre);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Le champ visé par un lien profond venu du front. La mise en évidence dure : elle sert à
+   retrouver le champ après le défilement, pas à clignoter une seconde. */
+.bo-champ.is-vise {
+  border-radius: 6px;
+  outline: 2px solid var(--bo-orange-sombre);
+  outline-offset: 6px;
+}
+
+/* « non affiché » n'est pas une alerte : le champ reste bon à écrire, il n'est
+   simplement rendu par aucun écran aujourd'hui. D'où le gris plutôt que l'orange de
+   « provisoire », qui appelle une relecture. */
+.bo-non-affiche {
+  padding: 1px 6px;
+  border-radius: 999px;
+  border: 1px solid #d6d6d6;
+  background: #f4f4f4;
+  color: #6a6a6a;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.bo-a-ecrire {
+  margin-left: 8px;
+  color: var(--bo-orange-sombre);
+  font-weight: 600;
+}
+
+.bo-indispo {
+  margin-left: 8px;
+  color: var(--bo-rouge);
+  font-weight: 600;
+}
+
+/* ───────────────────────── Listes de textes ───────────────────────── */
+
+.bo-liste { display: flex; flex-direction: column; gap: 6px; }
+.bo-liste-ligne { display: flex; align-items: flex-start; gap: 6px; }
+.bo-moment-ligne { display: grid; grid-template-columns: 90px 1fr 1.4fr auto; }
+.bo-moment-contexte { min-width: 240px; }
+.bo-liste-rang {
+  flex: 0 0 22px;
+  padding-top: 8px;
+  color: var(--bo-encre-2);
+  font-size: 12px;
+  text-align: right;
+}
+
+/* Une notion : la phrase d'acquis, et ce que la carte demande en plus. La grille
+   met la question au-dessus de sa réponse, et la source (vidéo, timecode) en pied —
+   l'ordre dans lequel la carte se lit. */
+.bo-notion {
+  display: grid;
+  grid-template-columns: 22px 1fr auto;
+  gap: 6px;
+  align-items: start;
+  padding: 8px;
+  border: 1px solid var(--bo-trait);
+  border-radius: var(--bo-r);
+}
+.bo-notion > .bo-liste-rang { grid-column: 1; grid-row: 1; padding-top: 8px; }
+.bo-notion > .bo-btn-icone { grid-column: 3; grid-row: 1; }
+.bo-notion > .bo-input,
+.bo-notion > .bo-notion-source { grid-column: 2; }
+.bo-notion-source { display: flex; gap: 6px; align-items: center; }
+.bo-notion-video { min-width: 0; }
+
+/* Une notion commencée sans sa phrase d'acquis n'est pas enregistrée : la ligne le dit,
+   sinon la saisie disparaîtrait au rechargement sans un mot. Vide, ce repère ne prend
+   aucune place — pas de marge, pas de puce. */
+.bo-notion > .bo-notion-incomplete {
+  grid-column: 2;
+  color: var(--bo-rouge);
+}
+.bo-notion > .bo-notion-incomplete:empty { display: none; }
+
+/* ───────────────────────── Ajout d'une vidéo ───────────────────────── */
+
+.bo-ajout {
+  padding: 16px;
+  border: 1px dashed var(--bo-trait);
+  border-radius: var(--bo-r);
+  background: #fafafb;
+}
+.bo-ajout-ligne { display: flex; gap: 8px; align-items: center; }
+.bo-ajout-etat:not(:empty) { margin-top: 10px; }
+
+/* ───────────────────────── Une vidéo ───────────────────────── */
+
+.bo-videos { display: flex; flex-direction: column; gap: 8px; }
+
+.bo-video {
+  border: 1px solid var(--bo-trait);
+  border-radius: var(--bo-r);
+  background: #fff;
+  overflow: hidden;
+}
+
+.bo-video-tete {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+}
+
+.bo-video-rang {
+  flex: 0 0 auto;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--bo-encre);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.bo-video-vignette {
+  flex: 0 0 88px;
+  width: 88px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 4px;
+  background: #ddd;
+}
+
+.bo-video-resume { flex: 1 1 auto; min-width: 0; cursor: pointer; }
+.bo-video-titre { margin: 0; font-weight: 600; }
+.bo-video-meta { margin: 2px 0 0; color: var(--bo-encre-2); font-size: 12.5px; }
+
+.bo-video-actions { display: flex; gap: 4px; flex: 0 0 auto; }
+
+.bo-video-details { display: none; }
+.bo-video-details.is-ouvert {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 4px 12px 16px;
+  border-top: 1px solid var(--bo-trait);
+}
+
+.bo-video-section { display: flex; flex-direction: column; gap: 12px; }
+.bo-video-section-titre {
+  margin: 8px 0 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--bo-encre-2);
+}
+
+/* ───────────────────────── Version allemande ───────────────────────── */
+
+.bo-de {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--bo-trait);
+}
+.bo-de-titre {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--bo-encre-2);
+}
+
+/* ───────────────────────── Boutons ───────────────────────── */
+
+.bo-btn {
+  padding: 8px 14px;
+  border: 1px solid var(--bo-trait);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--bo-encre);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.bo-btn:hover:not(:disabled) { border-color: #b5b5b8; }
+/* Un bouton refusé doit se lire comme tel avant d'être cliqué — sinon le refus
+   arrive après le geste, ce qui est vécu comme une panne. Le `title` dit pourquoi. */
+.bo-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* L'orange clair ne porte pas du texte blanc : 3,50:1, sous le seuil AA de 4,5:1 — et la
+   palette le disait déjà, en réservant `--bo-orange-sombre` au texte. Le bouton principal
+   employait pourtant l'orange clair, et c'est le bouton le plus cliqué de l'outil
+   (Enregistrer, Récupérer, Synchroniser). Il prend donc la teinte qui passe, celle qui
+   était déjà son survol ; le survol se contente d'assombrir. */
+.bo-btn--primaire {
+  border-color: var(--bo-orange-sombre);
+  background: var(--bo-orange-sombre);
+  color: #fff;
+  font-weight: 600;
+}
+.bo-btn--primaire:hover { filter: brightness(0.92); }
+.bo-btn--primaire:disabled { opacity: 0.6; cursor: default; }
+
+.bo-btn--danger { color: var(--bo-rouge); }
+.bo-btn--danger:hover:not(:disabled) { border-color: var(--bo-rouge); }
+
+.bo-btn-lien {
+  align-self: flex-start;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--bo-orange-sombre);
+  font: inherit;
+  font-size: 13.5px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.bo-btn-icone {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--bo-trait);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--bo-encre-2);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+}
+.bo-btn-icone:hover:not(:disabled) { border-color: #b5b5b8; color: var(--bo-encre); }
+.bo-btn-icone:disabled { opacity: 0.35; cursor: default; }
+.bo-btn-icone--danger:hover { border-color: var(--bo-rouge); color: var(--bo-rouge); }
+
+/* ───────────────────────── Messages ───────────────────────── */
+
+.bo-message {
+  padding: 10px 12px;
+  border-radius: var(--bo-r);
+  border-left: 3px solid var(--bo-trait);
+  background: #fff;
+  font-size: 14px;
+}
+.bo-message--info { border-color: #8a8a8d; }
+.bo-message--succes { border-color: var(--bo-vert); background: #f1f9f3; }
+.bo-message--erreur { border-color: var(--bo-rouge); background: #fdf2f1; }
+
+.bo-reprise {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.bo-reprise-actions { display: flex; gap: 8px; margin-left: auto; }
+
+/* ───────────────────────── Pied ───────────────────────── */
+
+.bo-pied {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  color: var(--bo-encre-2);
+  font-size: 12.5px;
+}
+
+@media (max-width: 780px) {
+  .bo-grille-2 { grid-template-columns: minmax(0, 1fr); }
+  .bo-ecran-tete { flex-direction: column; align-items: stretch; }
+  .bo-entete-corps { flex-wrap: wrap; gap: 12px; }
+  .bo-etat { margin-left: 0; text-align: left; }
+  .bo-moment-ligne { grid-template-columns: 76px minmax(0, 1fr) auto; }
+  .bo-moment-ligne > .bo-input { min-width: 0; }
+  .bo-moment-ligne > .bo-moment-contexte {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    min-width: 0;
+  }
+  .bo-moment-ligne > .bo-btn-icone {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+}
+
+/* En-tête de section avec son action à droite (rafraîchir depuis arte.tv). */
+.bo-video-section-tete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* ═══════════════════════ Onglets de langue ═══════════════════════
+   Un formulaire par langue. Les deux panneaux restent dans le DOM : basculer ne
+   doit pas refermer les vidéos dépliées ni perdre la position de défilement. */
+
+.bo-onglets-bloc { display: flex; flex-direction: column; }
+
+.bo-onglets {
+  display: flex;
+  gap: 2px;
+  margin-bottom: -1px;
+}
+
+.bo-onglet {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border: 1px solid var(--bo-trait);
+  border-bottom-color: transparent;
+  border-radius: var(--bo-r) var(--bo-r) 0 0;
+  background: #ececee;
+  color: var(--bo-encre-2);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.bo-onglet:hover { color: var(--bo-encre); }
+.bo-onglet.is-actif {
+  background: var(--bo-carte);
+  color: var(--bo-encre);
+  border-bottom-color: var(--bo-carte);
+}
+
+/* Nombre de champs encore à traduire : une information, pas une alerte. */
+.bo-onglet-compteur {
+  min-width: 20px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--bo-orange);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+.bo-onglet-compteur { display: inline-block; }
+/* Rien à traduire dans cette langue : pas de pastille du tout. */
+.bo-onglet-compteur.is-vide { display: none; }
+
+.bo-onglets-corps {
+  border-top: 1px solid var(--bo-trait);
+  padding-top: 20px;
+}
+
+.bo-panneau { display: none; flex-direction: column; gap: 20px; }
+.bo-panneau.is-actif { display: flex; }
+
+/* Deux versions, un seul contenu commun. Le sélecteur ne masque que les blocs
+   explicitement marqués V1 ou V2 dans les fiches.
+
+   `bo-formulaire-parcours` n'a pas de sélecteur : la fiche parcours n'a qu'un champ
+   propre à une version, montré sans détour. Même empilement, donc même règle. */
+.bo-formulaire-experiences,
+.bo-formulaire-parcours {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Un bloc replié : la Version 1, dont le contenu nouveau n'est plus alimenté, et les
+   champs qu'aucun écran ne rend. Ils restent atteignables sans occuper le rang de ce
+   qu'on écrit tous les jours. */
+.bo-bloc--replie > summary,
+.bo-video-section--replie > summary {
+  cursor: pointer;
+  color: var(--bo-encre-2);
+}
+.bo-bloc--replie[open] > summary,
+.bo-video-section--replie[open] > summary { color: var(--bo-encre); }
+
+.bo-video-section--replie { display: block; }
+
+.bo-repli--sans-emplacement > summary {
+  color: var(--bo-encre-2);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* Traduction : le texte français en repère sous le champ allemand. */
+.bo-de-video {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 0;
+  border-top: 1px solid var(--bo-trait);
+}
+.bo-de-video:first-of-type { border-top: none; padding-top: 0; }
+.bo-de-video-titre { margin: 0; font-weight: 600; font-size: 14px; }
+
+/* Où un champ s'affiche dans le prototype. Discret : c'est un repère, pas une consigne. */
+.bo-affichage {
+  color: var(--bo-encre-2);
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* La règle conditionnelle d'un champ. Distinguée de l'emplacement : celui-ci est un
+   constat, celle-là un piège — un champ rempli peut n'apparaître nulle part. */
+.bo-condition {
+  color: var(--bo-orange-sombre);
+  font-size: 12px;
+}
+
+/* L'action au pied d'une colonne d'assemblage. */
+.bo-colonne-pied { align-self: flex-start; margin-top: 4px; }
+
+/* ═══════════════════════ Choix d'image ═══════════════════════ */
+
+/* L'image retenue, seule et toujours visible ; la galerie est derrière le dépli. */
+.bo-image-choisie {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bo-image-choisie-vignette {
+  display: block;
+  width: 132px;
+  aspect-ratio: 16 / 9;
+  border: 2px solid var(--bo-orange);
+  border-radius: 4px;
+  object-fit: cover;
+  background: #ddd;
+}
+
+.bo-image-choisie-legende {
+  color: var(--bo-encre-2);
+  font-size: 13px;
+}
+
+.bo-galerie {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bo-vignette {
+  position: relative;
+  width: 132px;
+  padding: 0;
+  border: 2px solid var(--bo-trait);
+  border-radius: 4px;
+  background: #fff;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+}
+.bo-vignette:hover { border-color: #b5b5b8; }
+.bo-vignette.is-choisie { border-color: var(--bo-orange); }
+.bo-vignette.is-externe { cursor: default; }
+
+.bo-vignette img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #ddd;
+}
+
+.bo-vignette-legende {
+  display: block;
+  padding: 5px 7px;
+  color: var(--bo-encre-2);
+  font-size: 11.5px;
+  line-height: 1.3;
+  /* Deux lignes puis ellipse : les titres ARTE sont longs. */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.bo-vignette-marque {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--bo-orange);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.bo-repli { margin-top: 4px; }
+.bo-repli summary {
+  color: var(--bo-encre-2);
+  font-size: 12.5px;
+  cursor: pointer;
+}
+.bo-repli .bo-input { margin-top: 6px; }
+
+/* ═══════════════════════ Assemblage d'un parcours ═══════════════════════ */
+
+.bo-deux-colonnes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.bo-colonne { display: flex; flex-direction: column; gap: 4px; }
+
+.bo-colonne-titre {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--bo-encre-2);
+}
+.bo-colonne-compte {
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: #ececee;
+  font-size: 11px;
+}
+.bo-colonne-aide { margin: 0 0 6px; color: var(--bo-encre-2); font-size: 12.5px; }
+
+.bo-colonne-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 120px;
+  margin: 0;
+  padding: 8px;
+  border: 1px dashed var(--bo-trait);
+  border-radius: var(--bo-r);
+  background: #fafafb;
+  list-style: none;
+}
+.bo-colonne-liste.is-survol {
+  border-color: var(--bo-orange);
+  background: #fff5f1;
+}
+
+.bo-colonne-vide {
+  padding: 16px 8px;
+  color: var(--bo-encre-2);
+  font-size: 13px;
+  text-align: center;
+}
+
+.bo-carte-chapitre {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border: 1px solid var(--bo-trait);
+  border-radius: 4px;
+  background: #fff;
+  cursor: grab;
+}
+.bo-carte-chapitre.is-tire { opacity: 0.4; }
+
+.bo-carte-num {
+  flex: 0 0 auto;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: var(--bo-encre);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: ui-monospace, monospace;
+}
+
+.bo-carte-corps { flex: 1 1 auto; min-width: 0; }
+.bo-carte-titre { margin: 0; font-size: 14px; font-weight: 600; }
+.bo-carte-meta { margin: 1px 0 0; color: var(--bo-encre-2); font-size: 12px; }
+.bo-carte-actions { display: flex; gap: 3px; flex: 0 0 auto; }
+
+.bo-partage {
+  margin-left: 8px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: #eef4ff;
+  color: #1c4ea8;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ═══════════════════════ Statut d'un parcours ═══════════════════════ */
+
+.bo-statut { display: flex; align-items: center; gap: 10px; }
+
+.bo-pastille {
+  flex: 0 0 auto;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #ececee;
+  color: var(--bo-encre-2);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.bo-pastille.is-publie { background: #e6f4ea; color: var(--bo-vert); }
+
+/* Ce qui est calculé et non saisissable : dit une fois, discrètement. */
+.bo-calcule {
+  margin-left: 6px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  border: 1px solid var(--bo-trait);
+  color: var(--bo-encre-2);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.bo-liste-simple { margin: 0; padding-left: 20px; font-size: 14px; }
+.bo-liste-simple li { margin: 3px 0; }
+
+.bo-nav a.is-actif { border-color: var(--bo-orange); }
+
+@media (max-width: 900px) {
+  .bo-deux-colonnes { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Provenance d'un chapitre encore en réserve : une information neutre, à
+   distinguer du partage effectif (qui, lui, a des conséquences). */
+.bo-provenance {
+  margin-left: 8px;
+  color: var(--bo-encre-2);
+  font-size: 11.5px;
+  font-style: italic;
+  /* Un titre de parcours peut être long : on borne. */
+  display: inline-block;
+  max-width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+/* ═══════════════════════ Filtre de liste ═══════════════════════ */
+
+.bo-filtre {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.bo-input--filtre { flex: 1 1 auto; padding: 6px 9px; font-size: 13.5px; }
+.bo-filtre-compte {
+  flex: 0 0 auto;
+  color: var(--bo-encre-2);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* ═══════════════════════ Accès et enregistrement ═══════════════════════ */
+
+.bo-acces {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.bo-acces-ok { color: #8fd6a5; font-weight: 600; }
+.bo-acces-lecture { color: #ffb59c; font-weight: 600; }
+.bo-acces .bo-btn-lien { color: #b9b9b9; }
+.bo-acces .bo-btn-lien:hover { color: #fff; }
+
+/* Barre d'actions : posée en bas, sur tous les écrans. Elle dit l'action suivante
+   — enregistrer ce qui est saisi, puis mettre en ligne ce qui est enregistré — et
+   ne s'affiche que s'il y a effectivement quelque chose à faire ou à annoncer. */
+.bo-barre {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  display: none;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+  background: var(--bo-encre);
+  color: #fff;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.25);
+}
+.bo-barre.is-visible { display: flex; }
+
+/* Le contenu ne doit pas finir sous la barre. */
+body:has(.bo-barre.is-visible) .bo-pied { padding-bottom: 80px; }
+
+.bo-barre-etat {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  font-size: 13.5px;
+}
+.bo-barre-actions {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.bo-barre-quoi { font-weight: 600; }
+.bo-barre-note { color: #ffb59c; }
+/* Ce qui informe sans presser : détail des fichiers, date de dernière mise en ligne. */
+.bo-barre-note-grise { color: #9a9a9a; }
+/* La suite du travail, quand elle n'est pas encore l'action du moment. */
+.bo-barre-apres { color: #b9b9b9; font-style: italic; }
+.bo-barre-encours { color: #b9b9b9; }
+.bo-barre-ok { color: #8fd6a5; font-weight: 600; }
+.bo-barre-erreur { color: #ff9c8a; font-weight: 600; white-space: pre-line; }
+.bo-barre .bo-btn-lien { color: #b9b9b9; }
+
+/* Deuxième temps : plus rien à enregistrer, il reste à mettre en ligne. Le liseré
+   orange distingue les deux états sans changer la place ni la forme de la barre. */
+.bo-barre--publie { box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.25), inset 0 3px 0 var(--bo-orange); }
+
+/* ═══════════════════════ Modale ═══════════════════════ */
+
+.bo-modale {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.bo-modale-corps {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 560px;
+  padding: 24px;
+  border-radius: var(--bo-r);
+  background: var(--bo-carte);
+}
+
+.bo-modale-titre { margin: 0; font-size: 20px; }
+.bo-modale-texte { margin: 0; font-size: 14px; line-height: 1.55; }
+.bo-modale-texte code {
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: #f0f0f2;
+  font-size: 13px;
+}
+.bo-modale-actions { display: flex; justify-content: flex-end; gap: 8px; }
+
+/* ═══════════════════════ Contrôles avant publication ═══════════════════════ */
+
+.bo-controles {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 8px;
+}
+
+.bo-controle {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  margin: 0;
+  color: var(--bo-encre-2);
+  font-size: 12.5px;
+}
+
+.bo-controle-marque {
+  flex: 0 0 16px;
+  height: 16px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #ececee;
+  color: var(--bo-encre-2);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* Ce qui empêche la publication se distingue de ce qui la nuance seulement. */
+.bo-controle--bloquant { color: var(--bo-rouge); font-weight: 600; }
+.bo-controle--bloquant .bo-controle-marque { background: #fdecea; color: var(--bo-rouge); }
+
+/* Un défaut répété : une ligne comptée, le détail au dépli. La flèche par défaut de
+   `summary` se placerait avant la pastille et casserait l'alignement de la colonne. */
+.bo-controle-groupe > summary {
+  cursor: pointer;
+  list-style: none;
+}
+.bo-controle-groupe > summary::-webkit-details-marker { display: none; }
+.bo-controle-groupe > summary::after {
+  content: '▸';
+  margin-left: 6px;
+  color: var(--bo-encre-2);
+  font-size: 10px;
+  font-weight: 400;
+}
+.bo-controle-groupe[open] > summary::after { content: '▾'; }
+
+.bo-controle-detail {
+  margin: 2px 0 6px 23px;   /* 16 de pastille + 7 de gouttière : le texte s'aligne */
+  padding: 0;
+  list-style: none;
+  color: var(--bo-encre-2);
+  font-size: 12.5px;
+}
+.bo-controle-detail li { margin: 1px 0; }
+
+/* Origine du jeton, quand il vient d'un fichier plutôt que du navigateur. */
+.bo-acces-source { color: #9a9a9a; font-size: 12px; }
+
+/* ═══════════════════════ Porte d'entrée ═══════════════════════
+   Quand un coffre est déployé, l'outil s'ouvre sur une connexion : identifiant et
+   phrase de passe déchiffrent le jeton dans le navigateur. L'éditeur n'a donc
+   jamais le jeton entre les mains. */
+
+body.is-connexion .bo-entete,
+body.is-connexion .bo-pied { display: none; }
+
+.bo-connexion {
+  display: grid;
+  place-items: center;
+  min-height: 70vh;
+}
+
+.bo-connexion-corps {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 380px;
+  padding: 28px;
+  border: 1px solid var(--bo-trait);
+  border-radius: var(--bo-r);
+  background: var(--bo-carte);
+}
+
+.bo-connexion-titre { margin: 0; font-size: 22px; }
+.bo-connexion-texte { margin: -6px 0 6px; color: var(--bo-encre-2); font-size: 14px; }
+.bo-connexion .bo-btn--primaire { margin-top: 4px; }
+
+/* ═══════════════════════ Écran Traductions ═══════════════════════
+   Une vue de pilotage : ce qui compte est le nombre et l'endroit, pas la beauté.
+   ════════════════════════════════════════════════════════════════ */
+
+.bo-trad-totaux { display: flex; gap: 24px; }
+.bo-trad-total { display: flex; flex-direction: column; gap: 2px; }
+.bo-trad-total-val {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--bo-orange);
+  font-variant-numeric: tabular-nums;
+}
+.bo-trad-total-lbl { font-size: 13px; color: var(--bo-encre-2); }
+
+.bo-trad-carte { flex-direction: column; align-items: stretch; gap: 12px; }
+
+.bo-trad-tete {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.bo-trad-titre { margin: 0; font-weight: 600; font-size: 16px; }
+.bo-trad-statut { margin: 2px 0 0; font-size: 13px; color: var(--bo-encre-2); }
+
+.bo-trad-pastilles { display: flex; align-items: center; gap: 8px; flex: none; }
+.bo-trad-langue {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--bo-encre-2);
+}
+.bo-trad-ok { font-size: 13px; color: var(--bo-vert); }
+/* Ce qui reste à faire se voit, sans crier : ce n'est pas une erreur. */
+.bo-trad-manque {
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #fdecea;
+  color: var(--bo-rouge);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.bo-trad-bloc {
+  padding: 10px 12px;
+  border-left: 3px solid var(--bo-orange);
+  background: #fafafa;
+}
+.bo-trad-bloc-titre { margin: 0; font-weight: 600; font-size: 14px; }
+.bo-trad-bloc-detail { margin: 2px 0 0; font-size: 13px; color: var(--bo-encre-2); }
+
+.bo-trad-chapitres {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bo-trad-chapitres li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+.bo-trad-chapitre-detail { color: var(--bo-encre-2); }
