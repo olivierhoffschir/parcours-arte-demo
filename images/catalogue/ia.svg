@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 530" width="940" height="530" role="img" aria-label="Intelligence artificielle">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6D5BFF"/><stop offset="1" stop-color="#00D4FF"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.68" cy="0.28" r="0.75">
+      <stop offset="0" stop-color="#00D4FF" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#00D4FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scrim" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#151515" stop-opacity=".75"/>
+      <stop offset=".55" stop-color="#151515" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="940" height="530" fill="#151515"/>
+  <rect width="940" height="530" fill="url(#g)" opacity=".38"/>
+  <rect width="940" height="530" fill="url(#halo)" opacity=".55"/>
+  <g stroke="#FFFFFF" stroke-opacity=".28" stroke-width="1.5" fill="none">
+    <line x1="150" y1="150" x2="360" y2="110"/>
+    <line x1="150" y1="150" x2="360" y2="240"/>
+    <line x1="150" y1="300" x2="360" y2="240"/>
+    <line x1="150" y1="300" x2="360" y2="380"/>
+    <line x1="150" y1="420" x2="360" y2="380"/>
+    <line x1="150" y1="420" x2="360" y2="470"/>
+    <line x1="360" y1="110" x2="580" y2="170"/>
+    <line x1="360" y1="240" x2="580" y2="170"/>
+    <line x1="360" y1="240" x2="580" y2="320"/>
+    <line x1="360" y1="380" x2="580" y2="320"/>
+    <line x1="360" y1="380" x2="580" y2="440"/>
+    <line x1="360" y1="470" x2="580" y2="440"/>
+    <line x1="580" y1="170" x2="790" y2="240"/>
+    <line x1="580" y1="320" x2="790" y2="240"/>
+    <line x1="580" y1="320" x2="790" y2="360"/>
+    <line x1="580" y1="440" x2="790" y2="360"/>
+  </g>
+  <g>
+    <circle cx="150" cy="150" r="14" fill="#FFFFFF" fill-opacity="0.95"/>
+    <circle cx="150" cy="300" r="9" fill="#FFFFFF" fill-opacity="0.6"/>
+    <circle cx="150" cy="420" r="9" fill="#FFFFFF" fill-opacity="0.6"/>
+    <circle cx="360" cy="110" r="14" fill="#FFFFFF" fill-opacity="0.95"/>
+    <circle cx="360" cy="240" r="9" fill="#FA481C" fill-opacity="0.6"/>
+    <circle cx="360" cy="380" r="9" fill="#FFFFFF" fill-opacity="0.6"/>
+    <circle cx="360" cy="470" r="14" fill="#FFFFFF" fill-opacity="0.95"/>
+    <circle cx="580" cy="170" r="9" fill="#FFFFFF" fill-opacity="0.6"/>
+    <circle cx="580" cy="320" r="9" fill="#FA481C" fill-opacity="0.6"/>
+    <circle cx="580" cy="440" r="14" fill="#FFFFFF" fill-opacity="0.95"/>
+    <circle cx="790" cy="240" r="9" fill="#FFFFFF" fill-opacity="0.6"/>
+    <circle cx="790" cy="360" r="9" fill="#FFFFFF" fill-opacity="0.6"/>
+  </g>
+  <rect width="940" height="530" fill="url(#scrim)"/>
+</svg>

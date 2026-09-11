@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="50" fill="#1a1208"/>
+  <!-- Body -->
+  <ellipse cx="50" cy="65" rx="16" ry="20" fill="#D84315"/>
+  <!-- White chest -->
+  <ellipse cx="50" cy="72" rx="10" ry="12" fill="#FFF3E0"/>
+  <!-- Tail -->
+  <path d="M35 70 C25 65, 20 72, 28 80 C32 78, 38 75, 35 70Z" fill="#D84315"/>
+  <path d="M28 78 C24 82, 28 85, 32 82" fill="#fff" opacity="0.7"/>
+  <!-- Head -->
+  <circle cx="50" cy="40" r="14" fill="#E65100"/>
+  <!-- Ears -->
+  <path d="M38 30 L36 20 L44 28Z" fill="#E65100"/>
+  <path d="M62 30 L64 20 L56 28Z" fill="#E65100"/>
+  <path d="M39 28 L38 22 L43 27Z" fill="#BF360C"/>
+  <path d="M61 28 L62 22 L57 27Z" fill="#BF360C"/>
+  <!-- White face markings -->
+  <path d="M42 38 C42 42, 50 50, 58 38 C55 35, 45 35, 42 38Z" fill="#FFF3E0"/>
+  <!-- Eyes -->
+  <circle cx="44" cy="38" r="3.5" fill="#fff"/>
+  <circle cx="56" cy="38" r="3.5" fill="#fff"/>
+  <circle cx="45" cy="38" r="2" fill="#4E342E"/>
+  <circle cx="57" cy="38" r="2" fill="#4E342E"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="44" rx="3" ry="2" fill="#1a0a00"/>
+  <!-- Whiskers -->
+  <line x1="35" y1="43" x2="44" y2="44" stroke="#4E342E" stroke-width="0.8"/>
+  <line x1="35" y1="46" x2="44" y2="46" stroke="#4E342E" stroke-width="0.8"/>
+  <line x1="56" y1="44" x2="65" y2="43" stroke="#4E342E" stroke-width="0.8"/>
+  <line x1="56" y1="46" x2="65" y2="46" stroke="#4E342E" stroke-width="0.8"/>
+</svg>
