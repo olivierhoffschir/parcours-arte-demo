@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <circle cx="60" cy="60" r="60" fill="#5CBF5C"/>
+  <!-- Greyhound -->
+  <ellipse cx="60" cy="68" rx="16" ry="20" fill="#8B8682"/>
+  <ellipse cx="60" cy="48" rx="12" ry="16" fill="#9E9A96"/>
+  <ellipse cx="60" cy="38" rx="6" ry="10" fill="#9E9A96"/>
+  <circle cx="54" cy="45" r="3" fill="#222"/>
+  <circle cx="66" cy="45" r="3" fill="#222"/>
+  <ellipse cx="60" cy="54" rx="3" ry="2" fill="#333"/>
+  <ellipse cx="50" cy="32" rx="4" ry="8" fill="#9E9A96" transform="rotate(-15 50 32)"/>
+  <ellipse cx="70" cy="32" rx="4" ry="8" fill="#9E9A96" transform="rotate(15 70 32)"/>
+</svg>
