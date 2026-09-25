@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <circle cx="60" cy="60" r="60" fill="#555"/>
+  <!-- Unicorn -->
+  <ellipse cx="60" cy="68" rx="18" ry="22" fill="#FFF"/>
+  <ellipse cx="60" cy="48" rx="14" ry="16" fill="#FFF"/>
+  <polygon points="60,18 56,38 64,38" fill="#FFD700"/>
+  <circle cx="52" cy="46" r="3" fill="#222"/>
+  <circle cx="68" cy="46" r="3" fill="#222"/>
+  <ellipse cx="60" cy="55" rx="3" ry="2" fill="#FFB6C1"/>
+  <path d="M 44 35 Q 38 28 35 35" fill="none" stroke="#FF69B4" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 76 35 Q 82 28 85 35" fill="none" stroke="#87CEEB" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 42 75 Q 35 85 42 90" fill="none" stroke="#FF69B4" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 50 78 Q 45 90 50 95" fill="none" stroke="#87CEEB" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 70 78 Q 75 90 70 95" fill="none" stroke="#DDA0DD" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
