@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="50" fill="#1a1508"/>
+  <!-- Wings spread -->
+  <path d="M15 50 C10 35, 20 25, 35 35 L40 50 L35 60Z" fill="#4E342E"/>
+  <path d="M85 50 C90 35, 80 25, 65 35 L60 50 L65 60Z" fill="#4E342E"/>
+  <!-- Wing feather details -->
+  <path d="M18 45 C15 38, 22 30, 32 37" fill="#3E2723" opacity="0.7"/>
+  <path d="M82 45 C85 38, 78 30, 68 37" fill="#3E2723" opacity="0.7"/>
+  <!-- Body -->
+  <ellipse cx="50" cy="60" rx="14" ry="18" fill="#5D4037"/>
+  <!-- White chest -->
+  <ellipse cx="50" cy="65" rx="8" ry="10" fill="#D7CCC8"/>
+  <!-- Head -->
+  <circle cx="50" cy="36" r="12" fill="#FAFAFA"/>
+  <!-- Crown/head feathers -->
+  <path d="M44 26 C46 22, 50 20, 50 25" fill="#5D4037"/>
+  <path d="M56 26 C54 22, 50 20, 50 25" fill="#5D4037"/>
+  <!-- Eyes (intense) -->
+  <ellipse cx="45" cy="35" rx="3.5" ry="3" fill="#FDD835"/>
+  <ellipse cx="55" cy="35" rx="3.5" ry="3" fill="#FDD835"/>
+  <circle cx="45" cy="35" r="2" fill="#1a0a00"/>
+  <circle cx="55" cy="35" r="2" fill="#1a0a00"/>
+  <!-- Brow ridge -->
+  <path d="M40 32 L48 33" stroke="#5D4037" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M60 32 L52 33" stroke="#5D4037" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Beak -->
+  <path d="M48 38 L50 44 L52 38Z" fill="#F9A825"/>
+  <!-- Talons -->
+  <path d="M42 80 L40 86 M44 80 L44 87 M46 80 L48 86" stroke="#F9A825" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M54 80 L52 86 M56 80 L56 87 M58 80 L60 86" stroke="#F9A825" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
