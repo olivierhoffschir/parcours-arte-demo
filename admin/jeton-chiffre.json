@@ -1,0 +1,9 @@
+{
+  "_lisez_moi": "Jeton chiffré (AES-GCM, clé dérivée par PBKDF2-SHA256). Ce fichier est destiné à être public : il ne contient aucun secret en clair.",
+  "algorithme": "AES-GCM-256 / PBKDF2-SHA256",
+  "tours": 600000,
+  "sel": "O9OXstoQIIp9aNCsNargzA==",
+  "iv": "iK7dhsY+PKSjYYBb",
+  "chiffre": "X5SamLv+ii289KqFrClDvgPbKWO8VZngFITz2izOh9qVK9jejNnIN6rRHUiCYuIjVwuNmSrTGa20MVmJ/srVLF3tUNmTmMhIQEdvGdLiaIizEyWuzPtY518zdzoGbKCMsjeRFj5bD371n+h5UQ==",
+  "indication": ""
+}
