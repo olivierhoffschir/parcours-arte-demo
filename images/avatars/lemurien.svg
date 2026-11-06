@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <circle cx="60" cy="60" r="60" fill="#FF8C00"/>
+  <!-- Lemur -->
+  <ellipse cx="60" cy="62" rx="18" ry="20" fill="#F5F5F0"/>
+  <circle cx="48" cy="52" r="10" fill="#222"/>
+  <circle cx="72" cy="52" r="10" fill="#222"/>
+  <circle cx="48" cy="52" r="6" fill="#FFD700"/>
+  <circle cx="72" cy="52" r="6" fill="#FFD700"/>
+  <circle cx="48" cy="52" r="3" fill="#111"/>
+  <circle cx="72" cy="52" r="3" fill="#111"/>
+  <polygon points="60,62 56,70 64,70" fill="#222"/>
+  <ellipse cx="60" cy="40" rx="14" ry="10" fill="#444"/>
+  <circle cx="52" cy="36" r="4" fill="#444"/>
+  <circle cx="68" cy="36" r="4" fill="#444"/>
+</svg>

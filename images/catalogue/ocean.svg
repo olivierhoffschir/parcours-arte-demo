@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 530" width="940" height="530" role="img" aria-label="Océan et profondeurs">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B4F6C"/><stop offset="1" stop-color="#00C2CB"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.75" cy="0.2" r="0.75">
+      <stop offset="0" stop-color="#00C2CB" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#00C2CB" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scrim" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#151515" stop-opacity=".75"/>
+      <stop offset=".55" stop-color="#151515" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="940" height="530" fill="#151515"/>
+  <rect width="940" height="530" fill="url(#g)" opacity=".38"/>
+  <rect width="940" height="530" fill="url(#halo)" opacity=".55"/>
+  <g fill="#FFFFFF">
+    <path d="M0 150 C 235 124, 470 176, 940 137 L940 184 C 470 210, 235 158, 0 184 Z" fill-opacity="0.16"/>
+    <path d="M0 208 C 235 184, 470 232, 940 196 L940 242 C 470 266, 235 218, 0 242 Z" fill-opacity="0.14"/>
+    <path d="M0 266 C 235 244, 470 288, 940 255 L940 300 C 470 322, 235 278, 0 300 Z" fill-opacity="0.12"/>
+    <path d="M0 324 C 235 304, 470 344, 940 314 L940 358 C 470 378, 235 338, 0 358 Z" fill-opacity="0.1"/>
+    <path d="M0 382 C 235 364, 470 400, 940 373 L940 416 C 470 434, 235 398, 0 416 Z" fill-opacity="0.08"/>
+    <path d="M0 440 C 235 424, 470 456, 940 432 L940 474 C 470 490, 235 458, 0 474 Z" fill-opacity="0.06"/>
+    <path d="M0 498 C 235 484, 470 512, 940 491 L940 532 C 470 546, 235 518, 0 532 Z" fill-opacity="0.04"/>
+  </g>
+  <g fill="#FFFFFF" fill-opacity=".35">
+    <circle cx="700" cy="120" r="7"/>
+    <circle cx="760" cy="180" r="4"/>
+    <circle cx="660" cy="200" r="5"/>
+    <circle cx="820" cy="110" r="5"/>
+    <circle cx="730" cy="250" r="3"/>
+    <circle cx="620" cy="140" r="3"/>
+  </g>
+  <rect width="940" height="530" fill="url(#scrim)"/>
+</svg>
